@@ -46,6 +46,30 @@
     animation-iteration-count: .5;
 }
 
+.tg td {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 5px 5px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    word-break: normal;
+    cursor: pointer;
+    border: 1px solid red
+}
+
+.field {
+    border-color: black;
+    text-align: center;
+    vertical-align: middle
+}
+
+.table-box {
+    padding: 5px;
+    display: inline-block;
+    border: 1px solid red;
+}
+
 @keyframes numHidden {
     0% {
         opacity: 0;
