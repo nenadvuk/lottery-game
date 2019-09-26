@@ -33,23 +33,36 @@ for (var m = 0; m < numbers.length; m++) {
 }
 
 for (i = 1; i <= 7; i++) {
-	document.getElementById(`res${i}`).innerHTML = numbers[i - 1]
+	document.getElementById(`res${i}`).innerHTML = numbers[i - 1];
+	console.log(numbers)
 }
 
 
 
 
 // Ticket
-
-var checkedFileds = document.querySelectorAll("td")
-checkedNumbers = 0;
-chosenNumbers = [];
+// Chosing 
+var checkedFileds = document.querySelectorAll("td");
+var checkedNumbers = 0;
+var chosenNumbers = [];
+var chosenSeven = false;
+//added = true;
 for (var i = 0; i < checkedFileds.length; i++) {
 	checkedFileds[i].addEventListener("click", function () {
-		this.style.backgroundColor = 'violet';
-		this.style.color = "white";
-		checkedNumbers++;
-		document.getElementById("count").innerHTML = checkedNumbers;
-		console.log(this.id)
+		if (!chosenSeven) {
+			this.style.backgroundColor = 'violet';
+			this.style.color = "white";
+			// treba onemoguciti da se isti broj ponovo izabere
+			checkedNumbers++;
+			document.getElementById("count").innerHTML = checkedNumbers;
+			clickedNumber = Number(this.id)
+			chosenNumbers.push(clickedNumber)
+			sortedChosenNumbers = chosenNumbers.sort((a, b) => a - b);
+			if (checkedNumbers === 7) {
+				document.querySelector(".checked-numbers").style.backgroundColor = "lightgreen"
+				chosenSeven = true;
+			}
+			console.log(sortedChosenNumbers)
+		}
 	});
 }
