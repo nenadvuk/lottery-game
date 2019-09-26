@@ -13,6 +13,10 @@
    
 }
 
+.container-box {
+    
+}
+
 .ball {
     display: inline-block;
     width: 100%;
@@ -27,8 +31,8 @@
 }
 
 .stage {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     display: inline-block;
     margin: 5px;
     -webkit-perspective: 1200px;
@@ -47,8 +51,8 @@
     position: absolute;
     width: 100%;
     text-align: center;
-    line-height: 100px;
-    font-size: 50px;
+    line-height: 90px;
+    font-size: 45px;
     color: red;
     font-family: 'Roboto', sans-serif;
     animation: ballRoll 4s forwards;
@@ -58,14 +62,13 @@
 .tg td {
     text-align: center;
     font-family: Arial, sans-serif;
-    font-size: 14px;
-    padding: 5px 5px;
+    font-size: 13px;
+    padding: 4px 3px;
     border-style: solid;
-    border-width: 1px;
     overflow: hidden;
     word-break: normal;
     cursor: pointer;
-    border: 1px solid red
+    border: 2px solid red
 }
 
 .tg th {
@@ -75,7 +78,13 @@
     border-width: 1px;
     overflow: hidden;
     cursor: pointer;
-    border: 1px solid red
+    border: 1px solid red;
+    border: 2px solid red
+}
+
+
+.tg td:hover {
+    background-color:rgba(167, 125, 167, 0.336);
 }
 
 .table-box {

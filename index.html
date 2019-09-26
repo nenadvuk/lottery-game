@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="title">Please fill your ticket</div>
-        <button id="newGame"><span>Play</span></button><br>
+        <div class="title">Please fill your ticket</div><br>
+        <button class="btn btn-outline-success" id="newGame">Play again</button><br>
         <div class="balls">
             <section class="stage">
                 <figure class="ball">
@@ -51,8 +53,8 @@
             </section>
 
         </div>
-
         <div class="table-box">
+
             <table class="tg">
                 <tr>
                     <th class="checked-numbers" colspan="2"><span id="count">0</span>/7</th>
@@ -126,6 +128,7 @@
             </table>
         </div>
     </div>
+
 
     <script src="main.js"></script>
 </body>
