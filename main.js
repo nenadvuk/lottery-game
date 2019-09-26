@@ -1,7 +1,6 @@
 
 
-//document.getElementById("generate").addEventListener("click", function () {
-//document.getElementById("result-box").style = "display:inline-block"
+// Numbers
 document.querySelector("#newGame").addEventListener("click", function () {
 	window.location.reload()
 })
@@ -32,14 +31,25 @@ for (var m = 0; m < numbers.length; m++) {
 		}
 	}
 }
-// setTimeout(function () {}, 2500)
+
 for (i = 1; i <= 7; i++) {
 	document.getElementById(`res${i}`).innerHTML = numbers[i - 1]
 }
 
 
-//})
 
 
+// Ticket
 
-
+var checkedFileds = document.querySelectorAll("td")
+checkedNumbers = 0;
+chosenNumbers = [];
+for (var i = 0; i < checkedFileds.length; i++) {
+	checkedFileds[i].addEventListener("click", function () {
+		this.style.backgroundColor = 'violet';
+		this.style.color = "white";
+		checkedNumbers++;
+		document.getElementById("count").innerHTML = checkedNumbers;
+		console.log(this.id)
+	});
+}
