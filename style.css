@@ -9,6 +9,13 @@
     animation: numHidden 1s
 }
 
+.container {
+   
+}
+
+.container-box {
+    
+}
 
 .ball {
     display: inline-block;
@@ -72,26 +79,18 @@
     overflow: hidden;
     cursor: pointer;
     border: 1px solid red;
-    border: 2px solid red;
+    border: 2px solid red
 }
 
+
 .tg td:hover {
-    background-color: rgba(167, 125, 167, 0.336);
+    background-color:rgba(167, 125, 167, 0.336);
 }
 
 .table-box {
     padding: 5px;
     display: inline-block;
-    border: 1px solid rgb(255, 177, 177);
-}
-
-.avoid-click {
-    pointer-events: none;
-}
-
-.checked-filed {
-    background-color: violet;
-    color: white;
+    border: 1px solid red;
 }
 
 @keyframes numHidden {
