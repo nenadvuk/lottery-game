@@ -9,12 +9,9 @@
     animation: numHidden 1s
 }
 
-.container {
-   
-}
-
-.container-box {
-    
+.checked-filed {
+    background-color: red;
+    color: white;
 }
 
 .ball {
