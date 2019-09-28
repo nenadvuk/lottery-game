@@ -45,24 +45,44 @@ for (i = 1; i <= 7; i++) {
 var checkedFileds = document.querySelectorAll("td");
 var checkedNumbers = 0;
 var chosenNumbers = [];
-var chosenSeven = false;
-//added = true;
+var chosenSevenOrNull= false;
+var count = document.getElementById("count");
+var clear = document.getElementById("clear");
 for (var i = 0; i < checkedFileds.length; i++) {
 	checkedFileds[i].addEventListener("click", function () {
-		if (!chosenSeven) {
-			this.style.backgroundColor = 'violet';
-			this.style.color = "white";
-			// treba onemoguciti da se isti broj ponovo izabere
+		if (!chosenSevenOrNull) {
+			// Adding color to clicked field
+			this.classList.add('checked-filed');
+			// Adding class to clicked filed to prevent more than 0ne click
+			this.classList.add("avoid-click");
+			// Counter of clicked numbers
 			checkedNumbers++;
-			document.getElementById("count").innerHTML = checkedNumbers;
+			count.innerHTML = checkedNumbers;
 			clickedNumber = Number(this.id)
 			chosenNumbers.push(clickedNumber)
 			sortedChosenNumbers = chosenNumbers.sort((a, b) => a - b);
 			if (checkedNumbers === 7) {
 				document.querySelector(".checked-numbers").style.backgroundColor = "lightgreen"
-				chosenSeven = true;
+				chosenSevenOrNull = true;
 			}
 			console.log(sortedChosenNumbers)
 		}
 	});
-}
+};
+
+// Clear last filed
+clear.addEventListener("click", function() {
+	let popped = sortedChosenNumbers.pop();
+	element = document.getElementById(`${popped}`)
+	element.classList.remove("checked-filed")
+	checkedNumbers--;
+	count.innerHTML = checkedNumbers;
+	if(checkedNumbers === 0) {
+		clear.classList.add("avoid-click")
+	}
+	if (checkedNumbers === 7) {
+		chosenSevenOrNull = false;
+		// document.querySelector(".checked-numbers").style.backgroundColor = "white";
+	}
+	console.log(sortedChosenNumbers)
+});
