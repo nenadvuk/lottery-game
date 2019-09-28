@@ -72,7 +72,7 @@
     overflow: hidden;
     cursor: pointer;
     border: 1px solid red;
-    border: 2px solid red
+    border: 2px solid red;
 }
 
 .tg td:hover {
@@ -82,7 +82,7 @@
 .table-box {
     padding: 5px;
     display: inline-block;
-    border: 1px solid red;
+    border: 1px solid rgb(255, 177, 177);
 }
 
 .avoid-click {

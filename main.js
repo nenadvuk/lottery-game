@@ -45,15 +45,15 @@ for (i = 1; i <= 7; i++) {
 var checkedFileds = document.querySelectorAll("td");
 var checkedNumbers = 0;
 var chosenNumbers = [];
-var chosenSevenOrNull= false;
+var chosenSevenOrNull = false;
 var count = document.getElementById("count");
-var clear = document.getElementById("clear");
+var chkdNumColor = document.querySelector(".checked-numbers");
 for (var i = 0; i < checkedFileds.length; i++) {
 	checkedFileds[i].addEventListener("click", function () {
 		if (!chosenSevenOrNull) {
 			// Adding color to clicked field
 			this.classList.add('checked-filed');
-			// Adding class to clicked filed to prevent more than 0ne click
+			// Adding class to clicked filed to prevent more than one click
 			this.classList.add("avoid-click");
 			// Counter of clicked numbers
 			checkedNumbers++;
@@ -62,7 +62,7 @@ for (var i = 0; i < checkedFileds.length; i++) {
 			chosenNumbers.push(clickedNumber)
 			sortedChosenNumbers = chosenNumbers.sort((a, b) => a - b);
 			if (checkedNumbers === 7) {
-				document.querySelector(".checked-numbers").style.backgroundColor = "lightgreen"
+				chkdNumColor.style.backgroundColor = "lightgreen"
 				chosenSevenOrNull = true;
 			}
 			console.log(sortedChosenNumbers)
@@ -71,18 +71,19 @@ for (var i = 0; i < checkedFileds.length; i++) {
 };
 
 // Clear last filed
-clear.addEventListener("click", function() {
-	let popped = sortedChosenNumbers.pop();
-	element = document.getElementById(`${popped}`)
-	element.classList.remove("checked-filed")
-	checkedNumbers--;
-	count.innerHTML = checkedNumbers;
-	if(checkedNumbers === 0) {
-		clear.classList.add("avoid-click")
+
+var clear = document.getElementById("clear");
+clear.addEventListener("click", function () {
+	chosenSevenOrNull = false;
+	chkdNumColor.style.backgroundColor = "white";
+	if (checkedNumbers > 0 && checkedNumbers <=7) {
+		let popped = sortedChosenNumbers.pop();
+		element = document.getElementById(`${popped}`)
+		element.classList.remove("checked-filed");
+		element.classList.remove("avoid-click");
+		checkedNumbers--;
+		count.innerHTML = checkedNumbers;
 	}
-	if (checkedNumbers === 7) {
-		chosenSevenOrNull = false;
-		// document.querySelector(".checked-numbers").style.backgroundColor = "white";
-	}
+	
 	console.log(sortedChosenNumbers)
 });
