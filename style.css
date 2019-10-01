@@ -16,7 +16,7 @@
         height: 50px;
         width: 50px;
         border-radius: 50%;
-        background-image: url("/img/loto-kugla-sm.png");
+        background-image: url("/img/loto-kugla1-sm.png");
         animation: spin 1s linear, moveLeft 1s linear;
         animation-fill-mode: both;
         position: absolute;
@@ -26,7 +26,7 @@
         height: 50px;
         width: 50px;
         border-radius: 50%;
-        background-image: url("/img/loto-kugla-sm.png");
+        background-image: url("/img/loto-kugla2-sm.png");
         animation: spin 1s linear, moveLeft2 1s linear;
         animation-delay: 1s;
         animation-fill-mode: both;
@@ -37,7 +37,7 @@
         height: 50px;
         width: 50px;
         border-radius: 50%;
-        background-image: url("/img/loto-kugla-sm.png");
+        background-image: url("/img/loto-kugla3-sm.png");
         animation: spin 1s linear, moveLeft3 1s linear;
         animation-delay: 2s;
         animation-fill-mode: both;
@@ -48,7 +48,7 @@
         height: 50px;
         width: 50px;
         border-radius: 50%;
-        background-image: url("/img/loto-kugla-sm.png");
+        background-image: url("/img/loto-kugla4-sm.png");
         animation: spin 1s linear, moveLeft4 1s linear;
         animation-delay: 3s;
         animation-fill-mode: both;
@@ -59,7 +59,7 @@
         height: 50px;
         width: 50px;
         border-radius: 50%;
-        background-image: url("/img/loto-kugla-sm.png");
+        background-image: url("/img/loto-kugla5-sm.png");
         animation: spin 1s linear, moveLeft5 1s linear;
         animation-delay: 4s;
         animation-fill-mode: both;
@@ -70,7 +70,7 @@
         height: 50px;
         width: 50px;
         border-radius: 50%;
-        background-image: url("/img/loto-kugla-sm.png");
+        background-image: url("/img/loto-kugla6-sm.png");
         animation: spin 1s linear, moveLeft6 1s linear;
         animation-delay: 5s;
         animation-fill-mode: both;
@@ -81,7 +81,7 @@
         height: 50px;
         width: 50px;
         border-radius: 50%;
-        background-image: url("/img/loto-kugla-sm.png");
+        background-image: url("/img/loto-kugla7-sm.png");
         animation: spin 1s linear, moveLeft7 1s linear;
         animation-delay: 6s;
         animation-fill-mode: both;
