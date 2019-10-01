@@ -52,18 +52,18 @@ for (i = 1; i <= 7; i++) {
 
 // Ticket
 // Chosing 
-var checkedFileds = document.querySelectorAll("td");
+var checkedFields = document.querySelectorAll("td");
 var checkedNumbers = 0;
 var chosenNumbers = [];
 var chosenSevenOrNull = false;
 var count = document.getElementById("count");
 var chkdNumColor = document.querySelector(".checked-numbers");
-for (var i = 0; i < checkedFileds.length; i++) {
-	checkedFileds[i].addEventListener("click", function () {
+for (var i = 0; i < checkedFields.length; i++) {
+	checkedFields[i].addEventListener("click", function () {
 		if (!chosenSevenOrNull) {
 			// Adding color to clicked field
-			this.classList.add('checked-filed');
-			// Adding class to clicked filed to prevent more than one click
+			this.classList.add('checked-field');
+			// Adding class to clicked field to prevent more than one click
 			this.classList.add("avoid-click");
 			// Counter of clicked numbers
 			checkedNumbers++;
@@ -89,7 +89,7 @@ clear.addEventListener("click", function () {
 	if (checkedNumbers > 0 && checkedNumbers <=7) {
 		let popped = sortedChosenNumbers.pop();
 		element = document.getElementById(`${popped}`)
-		element.classList.remove("checked-filed");
+		element.classList.remove("checked-field");
 		element.classList.remove("avoid-click");
 		checkedNumbers--;
 		count.innerHTML = checkedNumbers;

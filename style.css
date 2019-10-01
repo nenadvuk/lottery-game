@@ -4,7 +4,57 @@
     box-sizing: border-box;
 }
 
+.tg td {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 4px 3px;
+    border-style: solid;
+    overflow: hidden;
+    word-break: normal;
+    cursor: pointer;
+    border: 2px solid red
+}
+
+.tg th {
+    text-align: left;
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid red;
+    border: 2px solid red
+}
+
+.tg td:hover {
+    background-color: rgba(167, 125, 167, 0.336);
+}
+
+.table-box {
+    padding: 5px;
+    display: inline-block;
+    border: 1px solid red;
+}
+
+.wrapper {
+    padding: 20px;
+    display: flex;
+    justify-content: start;
+}
+
+.checked-field{
+    background-color: rgb(255, 146, 146);
+    color: white;
+}
+
+.avoid-click {
+    cursor: none;
+}
+
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+
 @media only screen and (max-width: 600px) {
     body {
         background-color: lightblue;
@@ -16,11 +66,7 @@
         width: 200px;
         /*  border: 1px solid red; */
     }
-    .wrapper {
-        padding: 20px;
-        display: flex;
-        justify-content: start;
-    }
+    
     .ball-1 {
         height: 50px;
         width: 50px;
@@ -236,35 +282,3 @@
     }
 }
 
-.tg td {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    padding: 4px 3px;
-    border-style: solid;
-    overflow: hidden;
-    word-break: normal;
-    cursor: pointer;
-    border: 2px solid red
-}
-
-.tg th {
-    text-align: left;
-    padding: 5px;
-    border-style: solid;
-    border-width: 1px;
-    overflow: hidden;
-    cursor: pointer;
-    border: 1px solid red;
-    border: 2px solid red
-}
-
-.tg td:hover {
-    background-color: rgba(167, 125, 167, 0.336);
-}
-
-.table-box {
-    padding: 5px;
-    display: inline-block;
-    border: 1px solid red;
-}
