@@ -33,7 +33,11 @@ for (var m = 0; m < numbers.length; m++) {
 }
 
 for (i = 1; i <= 7; i++) {
-	document.getElementById(`res${i}`).innerHTML = numbers[i - 1];
+
+	if (numbers[i-1] < 10) {
+		document.getElementById(`res${i}`).innerHTML = `0${numbers[i - 1]}`;
+	} else document.getElementById(`res${i}`).innerHTML = numbers[i - 1];
+	
 	console.log(numbers)
 }
 

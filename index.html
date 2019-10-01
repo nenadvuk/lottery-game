@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,49 +15,52 @@
     <div class="container">
         <div class="title">Please fill your ticket</div><br>
         <button class="btn btn-outline-success" id="newGame">Play again</button><br>
-        <div class="balls">
-            <section class="stage">
-                <figure class="ball">
-                    <span class="number" id="res1"></span>
-                </figure>
-            </section>
-            <section class="stage">
-                <figure class="ball">
-                    <span class="number" id="res2"></span>
-                </figure>
-            </section>
-            <section class="stage">
-                <figure class="ball">
-                    <span class="number" id="res3"></span>
-                </figure>
-            </section>
-            <section class="stage">
-                <figure class="ball">
-                    <span class="number" id="res4"></span>
-                </figure>
-            </section>
-            <section class="stage">
-                <figure class="ball">
-                    <span class="number" id="res5"></span>
-                </figure>
-            </section>
-            <section class="stage">
-                <figure class="ball">
-                    <span class="number" id="res6"></span>
-                </figure>
-            </section>
-            <section class="stage">
-                <figure class="ball">
-                    <span class="number" id="res7"></span>
-                </figure>
-            </section>
+        <div class="ball-box">
+            <div class="ball-1">
+                <div class="result-box">
+                    <span id="res1"></span>
+                </div>
+            </div>
+            <div class="ball-2">
+                <div class="result-box">
+                    <span id="res2"></span>
+                </div>
+            </div>
+            <div class="ball-3">
+                <div class="result-box">
+                    <span id="res3"></span>
+                </div>
+            </div>
+            <div class="ball-4">
+                <div class="result-box">
+                    <span id="res4"></span>
+                </div>
+            </div>
+            <div class="ball-5">
+                <div class="result-box">
+                    <span id="res5"></span>
+                </div>
+            </div>
+            <div class="ball-6">
+                <div class="result-box">
+                    <span id="res6"></span>
+                </div>
+            </div>
+            <div class="ball-7">
+                <div class="result-box">
+                    <span id="res7"></span>
+                </div>
+            </div>
+
 
         </div>
+
         <div class="table-box">
 
             <table class="tg">
                 <tr>
-                    <th title="Number of checked fileds" class="checked-numbers" colspan="2"><span id="count">0</span>/7</th>
+                    <th title="Number of checked fileds" class="checked-numbers" colspan="2"><span id="count">0</span>/7
+                    </th>
                     <th title="Clear the last checked field" id="clear">X</th>
                 </tr>
                 <tr>
@@ -127,7 +130,7 @@
                 </tr>
             </table>
         </div>
-      
+
     </div>
 
 
