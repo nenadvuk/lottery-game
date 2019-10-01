@@ -43,7 +43,7 @@
     justify-content: start;
 }
 
-.checked-field{
+.checked-field {
     background-color: rgb(255, 146, 146);
     color: white;
 }
@@ -52,9 +52,7 @@
     cursor: none;
 }
 
-
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
 @media only screen and (max-width: 600px) {
     body {
         background-color: lightblue;
@@ -66,7 +64,6 @@
         width: 200px;
         /*  border: 1px solid red; */
     }
-    
     .ball-1 {
         height: 50px;
         width: 50px;
@@ -183,33 +180,30 @@
             transform: rotate(-720deg);
         }
     }
-    /* @-webkit-keyframes spin {
-    from {
-        -webkit-transform: rotate(0deg);
+    @-webkit-keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(-720deg);
+        }
     }
-    to {
-        -webkit-transform: rotate(360deg);
+    @-moz-keyframes moveLeftToRight {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(-720deg);
+        }
     }
-}
- */
-    /* @-moz-keyframes moveLeftToRight {
-    0% {
-        right: -100px;
+    @-ms-keyframes moveLeftToRight {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(-720deg);
+        }
     }
-    100% {
-        left: 40px;
-    }
-}
-
-@-ms-keyframes moveLeftToRight {
-    0% {
-        right: -200px;
-    }
-    100% {
-        right: 100%;
-    } 
-}
-*/
     @keyframes moveLeft {
         0% {
             right: -70%;
@@ -280,5 +274,34 @@
             right: 50%;
         }
     }
+    /*
+@-webkit-keyframes swing{
+    0%{-webkit-transform:rotate(-3deg)}
+    50%{-webkit-transform:rotate(3deg)}
+    100%{-webkit-transform:rotate(-3deg)}
 }
 
+@-moz-keyframes swing{
+    0%{-moz-transform:rotate(-3deg)}
+    50%{-moz-transform:rotate(3deg)}
+    100%{-moz-transform:rotate(-3deg)}
+}
+
+@-o-keyframes swing {
+    0%{-o-transform:rotate(-3deg)}
+    50%{-o-transform:rotate(3deg)}
+    100%{-o-transform:rotate(-3deg)}
+}
+
+@-ms-keyframes swing {
+    0%{-ms-transform:rotate(-3deg)}
+    50%{-ms-transform:rotate(3deg)}
+    100%{-ms-transform:rotate(-3deg)}
+}
+
+@keyframes swing {
+    0%{transform:rotate(-3deg)}
+    50%{transform:rotate(3deg)}
+    100%{transform:rotate(-3deg)}
+}  */
+}
