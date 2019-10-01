@@ -5,30 +5,35 @@
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
-
-
 @media only screen and (max-width: 600px) {
     body {
         background-color: lightblue;
     }
     .ball-box {
-       display: none;
+        display: none;
         position: relative;
         height: auto;
         width: 200px;
-       /*  border: 1px solid red; */
+        /*  border: 1px solid red; */
     }
     .wrapper {
         padding: 20px;
         display: flex;
-        justify-content:start;
+        justify-content: start;
     }
     .ball-1 {
         height: 50px;
         width: 50px;
         border-radius: 50%;
         background-image: url("/img/loto-kugla1-sm.png");
+        -webkit-animation: spin 1s linear, moveLeft 1s linear;
+        /* Safari & Chrome */
+        -moz-animation: spin 1s linear, moveLeft 1s linear;
+        /* Firefox */
+        -ms-animation: spin 1s linear, moveLeft 1s linear;
+        /* Internet Explorer */
+        -o-animation: spin 1s linear, moveLeft 1s linear;
+        /* Opera */
         animation: spin 1s linear, moveLeft 1s linear;
         animation-fill-mode: both;
         position: absolute;
@@ -191,7 +196,7 @@
     }
     @keyframes moveLeft4 {
         0% {
-          right: -70%;
+            right: -70%;
             opacity: 0;
         }
         100% {
@@ -201,7 +206,7 @@
     }
     @keyframes moveLeft5 {
         0% {
-           right: -70%;
+            right: -70%;
             opacity: 0;
         }
         100% {
@@ -211,7 +216,7 @@
     }
     @keyframes moveLeft6 {
         0% {
-          right: -70%;
+            right: -70%;
             opacity: 0;
         }
         100% {
@@ -221,7 +226,7 @@
     }
     @keyframes moveLeft7 {
         0% {
-           right: -70%;
+            right: -70%;
             opacity: 0;
         }
         100% {
@@ -230,10 +235,6 @@
         }
     }
 }
-
-
-
-
 
 .tg td {
     text-align: center;
@@ -258,9 +259,8 @@
     border: 2px solid red
 }
 
-
 .tg td:hover {
-    background-color:rgba(167, 125, 167, 0.336);
+    background-color: rgba(167, 125, 167, 0.336);
 }
 
 .table-box {
@@ -268,4 +268,3 @@
     display: inline-block;
     border: 1px solid red;
 }
-
