@@ -5,6 +5,12 @@ document.querySelector("#newGame").addEventListener("click", function () {
 	window.location.reload()
 })
 
+balls = document.querySelector(".ball-box")
+
+document.querySelector("#play").addEventListener("click", function() {
+	balls.style.display = "block"
+})
+
 var numbers = [];
 for (var i = 0; i < 7; i++) {
 	var add = true;
