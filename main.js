@@ -8,7 +8,7 @@ document.querySelector("#newGame").addEventListener("click", function () {
 balls = document.querySelector(".ball-box")
 
 document.querySelector("#play").addEventListener("click", function() {
-	balls.style.display = "block"
+	balls.style.display = "inline-block"
 })
 
 var numbers = [];
