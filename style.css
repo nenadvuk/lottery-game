@@ -213,6 +213,16 @@
             top: 0%;
             right: 50%;
         }
+    } /* */
+    @-webkit-keyframes moveLeft{
+        0% {
+            right: -70%;
+            opacity: 0;
+        }
+        100% {
+            top: 0%;
+            right: 50%;
+        }
     }
     @keyframes moveLeft2 {
         0% {
