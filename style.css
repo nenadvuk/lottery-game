@@ -68,7 +68,7 @@
         height: 50px;
         width: 50px;
         border-radius: 50%;
-        background-image: url("/img/loto-kugla1-sm.jpg");
+        background-image: url("/img/loto-kugla1-sm.png");
         -webkit-animation: spin 1s linear, moveLeft 1s linear;
         /* Safari & Chrome */
         -moz-animation: spin 1s linear, moveLeft 1s linear;
