@@ -59,7 +59,7 @@ var chosenSevenOrNull = false;
 var count = document.getElementById("count");
 var chkdNumColor = document.querySelector(".checked-numbers");
 for (var i = 0; i < checkedFields.length; i++) {
-	checkedFields[i].addEventListener("click", function () {
+	checkedFields[i].addEventListener("mousedown", function () {
 		if (!chosenSevenOrNull) {
 			// Adding color to clicked field
 			this.classList.add('checked-field');

@@ -27,10 +27,10 @@
     border: 2px solid red
 }
 
-.tg td:hover {
+/* .tg td:hover {
     background-color: rgba(167, 125, 167, 0.336);
 }
-
+ */
 .table-box {
     padding: 5px;
     display: inline-block;
