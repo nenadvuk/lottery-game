@@ -10,7 +10,14 @@ balls = document.querySelector(".ball-box")
 document.querySelector("#play").addEventListener("click", function () {
 	balls.style.display = "inline-block";
 	var score = compareArrays(numbers, sortedChosenNumbers);
+	setTimeout(function(){
+		document.querySelector(".score-box").style.display = "inline-block";
+	}, 5000);
+	//document.querySelector(".score-box").style.display = "inline-block";
 	console.log(score)
+	setTimeout(function(){
+		odometer.innerHTML = Number(score);
+	}, 5000);
 })
 
 var numbers = [];
@@ -119,4 +126,6 @@ function compareArrays(num, sor) {
 	return index
 }
 
-
+setTimeout(function(){
+    odometer.innerHTML = 004;
+}, 1000);

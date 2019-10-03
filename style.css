@@ -26,6 +26,14 @@
     border: 1px solid red;
     border: 2px solid red
 }
+.score-box {
+    display: none;
+    margin: auto;
+}
+
+.odometer {
+    font-size: 50px;
+}
 
 /* .tg td:hover {
     background-color: rgba(167, 125, 167, 0.336);
