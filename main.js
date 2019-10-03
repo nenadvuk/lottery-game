@@ -7,8 +7,10 @@ document.querySelector("#newGame").addEventListener("click", function () {
 
 balls = document.querySelector(".ball-box")
 
-document.querySelector("#play").addEventListener("click", function() {
-	balls.style.display = "inline-block"
+document.querySelector("#play").addEventListener("click", function () {
+	balls.style.display = "inline-block";
+	var score = compareArrays(numbers, sortedChosenNumbers);
+	console.log(score)
 })
 
 var numbers = [];
@@ -39,12 +41,9 @@ for (var m = 0; m < numbers.length; m++) {
 }
 
 for (i = 1; i <= 7; i++) {
-
-	if (numbers[i-1] < 10) {
+	if (numbers[i - 1] < 10) {
 		document.getElementById(`res${i}`).innerHTML = `0${numbers[i - 1]}`;
 	} else document.getElementById(`res${i}`).innerHTML = numbers[i - 1];
-	
-	console.log(numbers)
 }
 
 
@@ -55,6 +54,7 @@ for (i = 1; i <= 7; i++) {
 var checkedFields = document.querySelectorAll("td");
 var checkedNumbers = 0;
 var chosenNumbers = [];
+var sortedChosenNumbers = [];
 var chosenSevenOrNull = false;
 var count = document.getElementById("count");
 var chkdNumColor = document.querySelector(".checked-numbers");
@@ -75,8 +75,8 @@ for (var i = 0; i < checkedFields.length; i++) {
 				chkdNumColor.style.backgroundColor = "lightgreen"
 				chosenSevenOrNull = true;
 			}
-			console.log(sortedChosenNumbers)
-		}
+		} console.log(sortedChosenNumbers)
+
 	});
 };
 
@@ -86,14 +86,37 @@ var clear = document.getElementById("clear");
 clear.addEventListener("click", function () {
 	chosenSevenOrNull = false;
 	chkdNumColor.style.backgroundColor = "white";
-	if (checkedNumbers > 0 && checkedNumbers <=7) {
+	if (checkedNumbers > 0 && checkedNumbers <= 7) {
 		let popped = sortedChosenNumbers.pop();
 		element = document.getElementById(`${popped}`)
 		element.classList.remove("checked-field");
 		element.classList.remove("avoid-click");
 		checkedNumbers--;
 		count.innerHTML = checkedNumbers;
+
 	}
-	
-	console.log(sortedChosenNumbers)
 });
+
+
+// Score
+
+
+
+console.log(sortedChosenNumbers)
+console.log(numbers)
+
+
+function compareArrays(num, sor) {
+	
+	index = 0;
+	for (i = 0; i < num.length; i++) {
+		for (j = 0; j < sor.length; j++) {
+			if (num[i] === sor[j]) {
+				index++
+			}
+		}
+	}
+	return index
+}
+
+
