@@ -48,7 +48,7 @@
 .wrapper {
     padding: 20px;
     display: flex;
-    justify-content: start;
+    justify-content: center;
 }
 
 .checked-field {
@@ -58,6 +58,7 @@
 
 .avoid-click {
     cursor: none;
+    pointer-events: none;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');

@@ -12,12 +12,12 @@ document.querySelector("#play").addEventListener("click", function () {
 	var score = compareArrays(numbers, sortedChosenNumbers);
 	setTimeout(function(){
 		document.querySelector(".score-box").style.display = "inline-block";
-	}, 5000);
+	}, 7000);
 	//document.querySelector(".score-box").style.display = "inline-block";
 	console.log(score)
 	setTimeout(function(){
 		odometer.innerHTML = Number(score);
-	}, 5000);
+	}, 8000);
 })
 
 var numbers = [];
