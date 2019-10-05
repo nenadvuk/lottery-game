@@ -11,7 +11,7 @@ document.querySelector("#play").addEventListener("click", function () {
 	balls.style.display = "inline-block";
 	var score = compareArrays(numbers, sortedChosenNumbers);
 	setTimeout(function(){
-		document.querySelector(".score-box").style.display = "inline-block";
+		document.querySelector(".score-box").style.display = "block";
 	}, 7000);
 	//document.querySelector(".score-box").style.display = "inline-block";
 	console.log(score)
@@ -52,8 +52,6 @@ for (i = 1; i <= 7; i++) {
 		document.getElementById(`res${i}`).innerHTML = `0${numbers[i - 1]}`;
 	} else document.getElementById(`res${i}`).innerHTML = numbers[i - 1];
 }
-
-
 
 
 // Ticket
@@ -127,5 +125,5 @@ function compareArrays(num, sor) {
 }
 
 setTimeout(function(){
-    odometer.innerHTML = 004;
+    odometer.innerHTML = 000;
 }, 1000);

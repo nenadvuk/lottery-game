@@ -13,7 +13,8 @@
     overflow: hidden;
     word-break: normal;
     cursor: pointer;
-    border: 2px solid red
+    border: 2px solid red;
+    backface-visibility: hidden;
 }
 
 .tg th {
@@ -29,6 +30,7 @@
 .score-box {
     display: none;
     margin: auto;
+    z-index: 100;
 }
 
 .odometer {
@@ -37,18 +39,20 @@
 
 /* .tg td:hover {
     background-color: rgba(167, 125, 167, 0.336);
-}
- */
+} */
+
 .table-box {
+    position: relative;
     padding: 5px;
     display: inline-block;
     border: 1px solid red;
+   
 }
 
 .wrapper {
     padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .checked-field {
@@ -71,21 +75,16 @@
         position: relative;
         height: auto;
         width: 200px;
-        /*  border: 1px solid red; */
+        transition: all 2s;
+        border: 1px solid red;
+        z-index: 30;
     }
+
     .ball-1 {
         height: 50px;
         width: 50px;
         border-radius: 50%;
         background-image: url("img/loto-kugla1-sm.png");
-        -webkit-animation: spin 1s linear, moveLeft 1s linear;
-        /* Safari & Chrome */
-        -moz-animation: spin 1s linear, moveLeft 1s linear;
-        /* Firefox */
-        -ms-animation: spin 1s linear, moveLeft 1s linear;
-        /* Internet Explorer */
-        -o-animation: spin 1s linear, moveLeft 1s linear;
-        /* Opera */
         animation: spin 1s linear, moveLeft 1s linear;
         animation-fill-mode: both;
         position: absolute;
@@ -162,6 +161,7 @@
         top: 15px;
         left: 16px;
         font-size: 20px;
+        z-index: 50;
     }
     @keyframes spin {
         0% {
@@ -249,6 +249,35 @@
             right: 50%;
         }
     }  
+
+    .popup {
+        display: none;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color:rgba(255, 255, 255, 0.473);
+        z-index: 50;
+    }
+    
+    /* .popup-container {
+        position: absolute;
+        top: 250%;
+        left: 25%;
+        min-width: 50vh;
+        transform: translate(-50%, -50%);
+        background-color: #eee;
+        box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+        border-radius: 15px;
+        animation: box 1s ease-in-out;
+        animation-fill-mode: forwards;
+        backface-visibility: hidden;
+    } */
+    
+    
+    
+   
 }
 
 /* @media only screen and (max-width: 768px) {
