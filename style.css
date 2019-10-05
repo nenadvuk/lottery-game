@@ -28,9 +28,13 @@
     border: 2px solid red
 }
 .score-box {
-    display: none;
+    position: absolute;
     margin: auto;
     z-index: 100;
+    top: 20%;
+    left: 40%;
+    
+
 }
 
 .odometer {
@@ -38,7 +42,7 @@
 }
 
 /* .tg td:hover {
-    background-color: rgba(167, 125, 167, 0.336);
+    background-color: rgba(167, 125, 167, 0.436);
 } */
 
 .table-box {
@@ -257,24 +261,32 @@
         position: fixed;
         top: 0;
         left: 0;
-        background-color:rgba(255, 255, 255, 0.473);
+        background-color:rgba(0, 0, 0, 0.7);
         z-index: 50;
+        animation: popupWin 7s;
     }
     
-    /* .popup-container {
+    .popup-container {
         position: absolute;
-        top: 250%;
-        left: 25%;
+        top: 50%;
+        left: 50%;
         min-width: 50vh;
+        min-height: 50vh;
         transform: translate(-50%, -50%);
         background-color: #eee;
-        box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
         border-radius: 15px;
-        animation: box 1s ease-in-out;
-        animation-fill-mode: forwards;
         backface-visibility: hidden;
-    } */
+        text-align: center;
+       
+    } 
     
+    @keyframes popupWin {
+        0% {
+            opacity: 0;
+        }
+
+        
+    }
     
     
    

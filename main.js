@@ -4,14 +4,18 @@
 document.querySelector("#newGame").addEventListener("click", function () {
 	window.location.reload()
 })
+document.querySelector("#playAgain").addEventListener("click", function () {
+	window.location.reload()
+})
 
-balls = document.querySelector(".ball-box")
-
+balls = document.querySelector(".ball-box");
+scoreBox = document.querySelector(".score-box");
+popupWindow = document.getElementById("popup-window");
 document.querySelector("#play").addEventListener("click", function () {
 	balls.style.display = "inline-block";
 	var score = compareArrays(numbers, sortedChosenNumbers);
 	setTimeout(function(){
-		document.querySelector(".score-box").style.display = "block";
+		scoreBox.style.display = "block";
 	}, 7000);
 	//document.querySelector(".score-box").style.display = "inline-block";
 	console.log(score)
@@ -127,3 +131,6 @@ function compareArrays(num, sor) {
 setTimeout(function(){
     odometer.innerHTML = 000;
 }, 1000);
+
+
+// If score is 5 or more
