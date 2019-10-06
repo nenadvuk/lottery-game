@@ -263,6 +263,7 @@
         left: 0;
         background-color:rgba(0, 0, 0, 0.7);
         z-index: 50;
+        animation: popupSmooth 2s linear;
         
     }
     
@@ -279,6 +280,14 @@
         text-align: center;
        
     } 
+    @keyframes popupSmooth {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
     
 }
 
