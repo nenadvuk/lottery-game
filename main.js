@@ -14,14 +14,16 @@ popupWindow = document.getElementById("popup-window");
 document.querySelector("#play").addEventListener("click", function () {
 	balls.style.display = "inline-block";
 	var score = compareArrays(numbers, sortedChosenNumbers);
-	setTimeout(function(){
+	setTimeout(function () {
 		scoreBox.style.display = "block";
 	}, 7000);
-	//document.querySelector(".score-box").style.display = "inline-block";
 	console.log(score)
-	setTimeout(function(){
+	setTimeout(function () {
 		odometer.innerHTML = Number(score);
 	}, 8000);
+	setTimeout(function () {
+		document.querySelector(".popup").style.display = "block";
+	},8000)
 })
 
 var numbers = [];
@@ -116,7 +118,7 @@ console.log(numbers)
 
 
 function compareArrays(num, sor) {
-	
+
 	index = 0;
 	for (i = 0; i < num.length; i++) {
 		for (j = 0; j < sor.length; j++) {
@@ -128,8 +130,8 @@ function compareArrays(num, sor) {
 	return index
 }
 
-setTimeout(function(){
-    odometer.innerHTML = 000;
+setTimeout(function () {
+	odometer.innerHTML = 000;
 }, 1000);
 
 
