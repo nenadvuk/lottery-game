@@ -11,6 +11,7 @@ document.querySelector("#playAgain").addEventListener("click", function () {
 balls = document.querySelector(".ball-box");
 scoreBox = document.querySelector(".score-box");
 popupWindow = document.getElementById("popup-window");
+popup = document.querySelector(".popup")
 document.querySelector("#play").addEventListener("click", function () {
 	balls.style.display = "inline-block";
 	var score = compareArrays(numbers, sortedChosenNumbers);
@@ -20,10 +21,10 @@ document.querySelector("#play").addEventListener("click", function () {
 	console.log(score)
 	setTimeout(function () {
 		odometer.innerHTML = Number(score);
-	}, 8000);
+	}, 8500);
 	setTimeout(function () {
-		document.querySelector(".popup").style.display = "block";
-	},8000)
+		popup.style.display = "block";
+	}, 8000)
 })
 
 var numbers = [];
@@ -104,14 +105,10 @@ clear.addEventListener("click", function () {
 		element.classList.remove("avoid-click");
 		checkedNumbers--;
 		count.innerHTML = checkedNumbers;
-
 	}
 });
 
-
 // Score
-
-
 
 console.log(sortedChosenNumbers)
 console.log(numbers)
