@@ -37,8 +37,14 @@ html {
     transition: all .2s;
 }
 
+#play {
+    
+    pointer-events: none;
+    background-color: rgb(255, 107, 107);
+    color: white;
+    text-decoration: line-through;
+}
 .avoid-click {
-    cursor: none;
     pointer-events: none;
 }
 
@@ -208,6 +214,77 @@ html {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        right: -10%;
+        opacity: 0;
+    }
+    100% {
+        top: 0%;
+        right: 70%;
+    }
+}
+@keyframes moveLeft2 {
+    0% {
+        right: -10%;
+        opacity: 0;
+    }
+    100% {
+        top: 13%;
+        right: 70%;
+    }
+}
+@keyframes moveLeft3 {
+    0% {
+        right: -10%;
+        opacity: 0;
+    }
+    100% {
+        top: 26%;
+        right: 70%;
+    }
+}
+@keyframes moveLeft4 {
+    0% {
+        right: -10%;
+        opacity: 0;
+    }
+    100% {
+        top: 39%;
+        right: 70%;
+    }
+}
+@keyframes moveLeft5 {
+    0% {
+        right: -10%;
+        opacity: 0;
+    }
+    100% {
+        top: 52%;
+        right: 70%;
+    }
+}
+@keyframes moveLeft6 {
+    0% {
+        right: -10%;
+        opacity: 0;
+    }
+    100% {
+        top: 65%;
+        right: 70%;
+    }
+}
+@keyframes moveLeft7 {
+    0% {
+        right: -10%;
+        opacity: 0;
+    }
+    100% {
+        top: 78%;
+        right: 70%;
     }
 }
 

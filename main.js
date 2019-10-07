@@ -70,6 +70,8 @@ var sortedChosenNumbers = [];
 var chosenSevenOrNull = false;
 var count = document.getElementById("count");
 var chkdNumColor = document.querySelector(".checked-numbers");
+var play = document.getElementById("play")
+var gamesNumber = 0;
 for (var i = 0; i < checkedFields.length; i++) {
 	checkedFields[i].addEventListener("mousedown", function () {
 		if (!chosenSevenOrNull) {
@@ -86,9 +88,17 @@ for (var i = 0; i < checkedFields.length; i++) {
 			if (checkedNumbers === 7) {
 				chkdNumColor.style.backgroundColor = "lightgreen"
 				chosenSevenOrNull = true;
+				play.style.backgroundColor = "green";
+				play.style.pointerEvents = "all";
+				play.style.textDecoration = "none";
+				/* if (play) {
+					console.log("ok")
+					gamesNumber++;
+					localStorage.setItem("Played", gamesNumber)
+				} */
 			}
 		} console.log(sortedChosenNumbers)
-
+		
 	});
 };
 
