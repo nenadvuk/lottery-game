@@ -43,32 +43,29 @@ html {
 }
 
 #play {
-    
     pointer-events: none;
     background-color: rgb(255, 107, 107);
     color: white;
-    text-decoration: line-through;
 }
+
 .avoid-click {
     pointer-events: none;
 }
 
 .wrapper {
-    background-image:linear-gradient(to bottom, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%), url("img/lotto-balls.jpg");
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%), url("img/lotto-balls.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 20px;
     display: flex;
     justify-content: flex-start;
     min-height: 50vh;
-    
 }
 
 .table-box {
     position: relative;
     padding: 5px;
     display: inline-block;
-    border: 1px solid red;
     background-color: whitesmoke;
 }
 
@@ -83,7 +80,6 @@ html {
 .odometer {
     font-size: 50px;
 }
-
 
 .ball-box {
     display: none;
@@ -108,7 +104,6 @@ html {
     width: 50px;
     border-radius: 50%;
     position: absolute;
-    
 }
 
 .ball-1 {
@@ -237,6 +232,7 @@ html {
         right: 70%;
     }
 }
+
 @keyframes moveLeft2 {
     0% {
         right: -10%;
@@ -247,6 +243,7 @@ html {
         right: 70%;
     }
 }
+
 @keyframes moveLeft3 {
     0% {
         right: -10%;
@@ -257,6 +254,7 @@ html {
         right: 70%;
     }
 }
+
 @keyframes moveLeft4 {
     0% {
         right: -10%;
@@ -267,6 +265,7 @@ html {
         right: 70%;
     }
 }
+
 @keyframes moveLeft5 {
     0% {
         right: -10%;
@@ -277,6 +276,7 @@ html {
         right: 70%;
     }
 }
+
 @keyframes moveLeft6 {
     0% {
         right: -10%;
@@ -287,6 +287,7 @@ html {
         right: 70%;
     }
 }
+
 @keyframes moveLeft7 {
     0% {
         right: -10%;
@@ -308,8 +309,6 @@ html {
     .tg th {
         font-size: 2rem;
     }
-    
-
     @keyframes moveLeft {
         0% {
             right: -10%;
@@ -392,7 +391,6 @@ html {
     .tg th {
         font-size: 2rem;
     }
-
     @keyframes moveLeft {
         0% {
             right: -10%;

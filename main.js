@@ -90,7 +90,6 @@ for (var i = 0; i < checkedFields.length; i++) {
 				chosenSevenOrNull = true;
 				play.style.backgroundColor = "green";
 				play.style.pointerEvents = "all";
-				play.style.textDecoration = "none";
 				if (play) {
 					console.log("ok")
 					gamesNumber++;
@@ -141,7 +140,7 @@ function compareArrays(num, sor) {
 
 setTimeout(function () {
 	odometer.innerHTML = 000;
-}, 1000);
+}, 800);
 
 
 // If score is 5 or more
