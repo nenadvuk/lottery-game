@@ -94,7 +94,6 @@ for (var i = 0; i < checkedFields.length; i++) {
 					console.log("ok")
 					gamesNumber++;
 					localStorage.setItem("Played", gamesNumber);
-					
 
 				}
 			}
