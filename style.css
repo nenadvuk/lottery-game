@@ -11,7 +11,7 @@ html {
 .tg td {
     text-align: center;
     font-family: Arial, sans-serif;
-    font-size: 1rem;
+    font-size: 2rem;
     padding: 4px 3px;
     border-style: solid;
     overflow: hidden;
@@ -22,6 +22,7 @@ html {
 }
 
 .tg th {
+    font-size: 2rem;
     text-align: left;
     padding: 5px;
     border-style: solid;
@@ -55,6 +56,7 @@ html {
     padding: 20px;
     display: flex;
     justify-content: flex-start;
+    min-height: 50vh;
     
 }
 
@@ -302,6 +304,8 @@ html {
     .tg th {
         font-size: 2rem;
     }
+    
+
     @keyframes moveLeft {
         0% {
             right: -10%;
@@ -462,10 +466,10 @@ html {
         background-color: lightblue;
     }
     .tg td {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     .tg th {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     @keyframes moveLeft {
         0% {
