@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="http://github.hubspot.com/odometer/themes/odometer-theme-slot-machine.css" />
     <script src="http://github.hubspot.com/odometer/odometer.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -16,8 +14,8 @@
 <body>
     <div class="container">
         <div class="title">Please fill your ticket</div><br>
-        <button class="btn btn-outline-success" id="newGame">Play again</button><br>
-        <button id="play">PLAY</button>
+        <button class="btn" id="newGame">Play again</button>
+        <button class="btn" button id="play">PLAY</button>
         <div class="wrapper">
             <div class="table-box">
                 <table class="tg">
@@ -95,37 +93,37 @@
                 </table>
             </div>
             <div class="ball-box">
-                <div class="ball-1">
+                <div class="ball-1 balls">
                     <div class="result-box">
                         <span id="res1"></span>
                     </div>
                 </div>
-                <div class="ball-2">
+                <div class="ball-2 balls">
                     <div class="result-box">
                         <span id="res2"></span>
                     </div>
                 </div>
-                <div class="ball-3">
+                <div class="ball-3 balls">
                     <div class="result-box">
                         <span id="res3"></span>
                     </div>
                 </div>
-                <div class="ball-4">
+                <div class="ball-4 balls">
                     <div class="result-box">
                         <span id="res4"></span>
                     </div>
                 </div>
-                <div class="ball-5">
+                <div class="ball-5 balls">
                     <div class="result-box">
                         <span id="res5"></span>
                     </div>
                 </div>
-                <div class="ball-6">
+                <div class="ball-6 balls">
                     <div class="result-box">
                         <span id="res6"></span>
                     </div>
                 </div>
-                <div class="ball-7">
+                <div class="ball-7 balls">
                     <div class="result-box">
                         <span id="res7"></span>
                     </div>
@@ -139,11 +137,11 @@
             <h1>Your score:</h1>
             <div class="score-box">
                 <div id="odometer" class="odometer"></div><br><br>
-              <!--   <h1><span id="goodScore">congrat</span></h1><br> -->
-                <button id="playAgain">new game</button>
+                <!--   <h1><span id="goodScore">congrat</span></h1><br> -->
+                <button class="btn" id="playAgain">new game</button>
             </div>
         </div>
-       
+
 
     </div>
 

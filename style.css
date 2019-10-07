@@ -4,10 +4,14 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 .tg td {
     text-align: center;
     font-family: Arial, sans-serif;
-    font-size: 13px;
+    font-size: 1rem;
     padding: 4px 3px;
     border-style: solid;
     overflow: hidden;
@@ -25,38 +29,6 @@
     overflow: hidden;
     cursor: pointer;
     border: 1px solid red;
-    border: 2px solid red
-}
-.score-box {
-    position: absolute;
-    margin: auto;
-    z-index: 100;
-    top: 20%;
-    left: 40%;
-    
-
-}
-
-.odometer {
-    font-size: 50px;
-}
-
-/* .tg td:hover {
-    background-color: rgba(167, 125, 167, 0.436);
-} */
-
-.table-box {
-    position: relative;
-    padding: 5px;
-    display: inline-block;
-    border: 1px solid red;
-   
-}
-
-.wrapper {
-    padding: 20px;
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .checked-field {
@@ -64,124 +36,352 @@
     color: white;
 }
 
+.wrapper {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid white;
+}
+
+.table-box {
+    position: relative;
+    padding: 5px;
+    display: inline-block;
+    border: 1px solid red;
+}
+
+.score-box {
+    position: absolute;
+    z-index: 100;
+    text-align: center;
+    top: 20%;
+    right: 30%;
+}
+
+.ball-box {
+    display: none;
+    position: relative;
+    height: auto;
+    width: 400px;
+    transition: all 2s;
+    border: 1px solid red;
+    z-index: 30;
+}
+
+.result-box {
+    position: relative;
+    top: 15px;
+    left: 16px;
+    font-size: 20px;
+    z-index: 50;
+}
+
+.balls {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    
+}
+
+.ball-1 {
+    background-image: url("img/loto-kugla1-sm.png");
+    animation: spin 1s linear, moveLeft 1s linear;
+    animation-fill-mode: both;
+    top: 0%;
+}
+
+.ball-2 {
+    background-image: url("img/loto-kugla2-sm.png");
+    animation: spin 1s linear, moveLeft2 1s linear;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    top: 13%;
+}
+
+.ball-3 {
+    background-image: url("img/loto-kugla3-sm.png");
+    animation: spin 1s linear, moveLeft3 1s linear;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    top: 26%;
+}
+
+.ball-4 {
+    background-image: url("img/loto-kugla4-sm.png");
+    animation: spin 1s linear, moveLeft4 1s linear;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+    top: 39%;
+}
+
+.ball-5 {
+    background-image: url("img/loto-kugla5-sm.png");
+    animation: spin 1s linear, moveLeft5 1s linear;
+    animation-delay: 4s;
+    animation-fill-mode: both;
+    top: 52%;
+}
+
+.ball-6 {
+    background-image: url("img/loto-kugla6-sm.png");
+    animation: spin 1s linear, moveLeft6 1s linear;
+    animation-delay: 5s;
+    animation-fill-mode: both;
+    top: 65%;
+}
+
+.ball-7 {
+    background-image: url("img/loto-kugla7-sm.png");
+    animation: spin 1s linear, moveLeft7 1s linear;
+    animation-delay: 6s;
+    animation-fill-mode: both;
+    top: 78%;
+}
+
+.odometer {
+    font-size: 50px;
+}
+
 .avoid-click {
     cursor: none;
     pointer-events: none;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+.btn {
+    background-color: white;
+    color: black;
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: red;
+    color: white;
+}
+
+.popup {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 50;
+    animation: popupSmooth 1.5s linear;
+}
+
+.popup-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 50vh;
+    min-height: 50vh;
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    text-align: center;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-720deg);
+    }
+}
+
+@keyframes popupSmooth {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    body {
+        background-color: rgb(182, 255, 206);
+    }
+    .tg td {
+        font-size: 2rem;
+    }
+    .tg th {
+        font-size: 2rem;
+    }
+    @keyframes moveLeft {
+        0% {
+            right: -10%;
+            opacity: 0;
+        }
+        100% {
+            top: 0%;
+            right: 70%;
+        }
+    }
+    @keyframes moveLeft2 {
+        0% {
+            right: -10%;
+            opacity: 0;
+        }
+        100% {
+            top: 13%;
+            right: 70%;
+        }
+    }
+    @keyframes moveLeft3 {
+        0% {
+            right: -10%;
+            opacity: 0;
+        }
+        100% {
+            top: 26%;
+            right: 70%;
+        }
+    }
+    @keyframes moveLeft4 {
+        0% {
+            right: -10%;
+            opacity: 0;
+        }
+        100% {
+            top: 39%;
+            right: 70%;
+        }
+    }
+    @keyframes moveLeft5 {
+        0% {
+            right: -10%;
+            opacity: 0;
+        }
+        100% {
+            top: 52%;
+            right: 70%;
+        }
+    }
+    @keyframes moveLeft6 {
+        0% {
+            right: -10%;
+            opacity: 0;
+        }
+        100% {
+            top: 65%;
+            right: 70%;
+        }
+    }
+    @keyframes moveLeft7 {
+        0% {
+            right: -10%;
+            opacity: 0;
+        }
+        100% {
+            top: 78%;
+            right: 70%;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: rgb(255, 182, 182);
+    }
+    .tg td {
+        font-size: 2rem;
+    }
+    .tg th {
+        font-size: 2rem;
+    }
+    @keyframes moveLeft {
+        0% {
+            right: -10%;
+            opacity: 0;
+        }
+        100% {
+            top: 0%;
+            right: 70%;
+        }
+    }
+    @keyframes moveLeft2 {
+        0% {
+            right: -10%;
+            opacity: 0;
+        }
+        100% {
+            top: 13%;
+            right: 70%;
+        }
+    }
+    @keyframes moveLeft3 {
+        0% {
+            right: -10%;
+            opacity: 0;
+        }
+        100% {
+            top: 26%;
+            right: 70%;
+        }
+    }
+    @keyframes moveLeft4 {
+        0% {
+            right: -10%;
+            opacity: 0;
+        }
+        100% {
+            top: 39%;
+            right: 70%;
+        }
+    }
+    @keyframes moveLeft5 {
+        0% {
+            right: -10%;
+            opacity: 0;
+        }
+        100% {
+            top: 52%;
+            right: 70%;
+        }
+    }
+    @keyframes moveLeft6 {
+        0% {
+            right: -10%;
+            opacity: 0;
+        }
+        100% {
+            top: 65%;
+            right: 70%;
+        }
+    }
+    @keyframes moveLeft7 {
+        0% {
+            right: -10%;
+            opacity: 0;
+        }
+        100% {
+            top: 78%;
+            right: 70%;
+        }
+    }
+}
+
 @media only screen and (max-width: 425px) {
     body {
         background-color: lightblue;
     }
-    .ball-box {
-        display: none;
-        position: relative;
-        height: auto;
-        width: 200px;
-        transition: all 2s;
-        border: 1px solid red;
-        z-index: 30;
+    .tg td {
+        font-size: 1.5rem;
     }
-
-    .ball-1 {
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        background-image: url("img/loto-kugla1-sm.png");
-        animation: spin 1s linear, moveLeft 1s linear;
-        animation-fill-mode: both;
-        position: absolute;
-        top: 0%;
-    }
-    .ball-2 {
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        background-image: url("img/loto-kugla2-sm.png");
-        animation: spin 1s linear, moveLeft2 1s linear;
-        animation-delay: 1s;
-        animation-fill-mode: both;
-        position: absolute;
-        top: 13%;
-    }
-    .ball-3 {
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        background-image: url("img/loto-kugla3-sm.png");
-        animation: spin 1s linear, moveLeft3 1s linear;
-        animation-delay: 2s;
-        animation-fill-mode: both;
-        position: absolute;
-        top: 26%;
-    }
-    .ball-4 {
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        background-image: url("img/loto-kugla4-sm.png");
-        animation: spin 1s linear, moveLeft4 1s linear;
-        animation-delay: 3s;
-        animation-fill-mode: both;
-        position: absolute;
-        top: 39%;
-    }
-    .ball-5 {
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        background-image: url("img/loto-kugla5-sm.png");
-        animation: spin 1s linear, moveLeft5 1s linear;
-        animation-delay: 4s;
-        animation-fill-mode: both;
-        position: absolute;
-        top: 52%;
-    }
-    .ball-6 {
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        background-image: url("img/loto-kugla6-sm.png");
-        animation: spin 1s linear, moveLeft6 1s linear;
-        animation-delay: 5s;
-        animation-fill-mode: both;
-        position: absolute;
-        top: 65%;
-    }
-    .ball-7 {
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        background-image: url("img/loto-kugla7-sm.png");
-        animation: spin 1s linear, moveLeft7 1s linear;
-        animation-delay: 6s;
-        animation-fill-mode: both;
-        position: absolute;
-        top: 78%;
-    }
-    .result-box {
-        position: relative;
-        top: 15px;
-        left: 16px;
-        font-size: 20px;
-        z-index: 50;
-    }
-    @keyframes spin {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(-720deg);
-        }
-    }
-    @-webkit-keyframes spin {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(-720deg);
-        }
+    .tg th {
+        font-size: 1.5rem;
     }
     @keyframes moveLeft {
         0% {
@@ -192,7 +392,7 @@
             top: 0%;
             right: 50%;
         }
-    } 
+    }
     @keyframes moveLeft2 {
         0% {
             right: -70%;
@@ -252,50 +452,5 @@
             top: 78%;
             right: 50%;
         }
-    }  
-
-    .popup {
-        display: none;
-        height: 100vh;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color:rgba(0, 0, 0, 0.7);
-        z-index: 50;
-        animation: popupSmooth 2s linear;
-        
     }
-    
-    .popup-container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        min-width: 50vh;
-        min-height: 50vh;
-        transform: translate(-50%, -50%);
-        background-color: #eee;
-        border-radius: 15px;
-        backface-visibility: hidden;
-        text-align: center;
-       
-    } 
-    @keyframes popupSmooth {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-    
 }
-
-/* @media only screen and (max-width: 768px) {
-
-    body {
-        background-color: rgb(255, 182, 182);
-    }
-    
-
-} */
