@@ -91,11 +91,13 @@ for (var i = 0; i < checkedFields.length; i++) {
 				play.style.backgroundColor = "green";
 				play.style.pointerEvents = "all";
 				play.style.textDecoration = "none";
-				/* if (play) {
+				if (play) {
 					console.log("ok")
 					gamesNumber++;
-					localStorage.setItem("Played", gamesNumber)
-				} */
+					localStorage.setItem("Played", gamesNumber);
+					
+
+				}
 			}
 		} console.log(sortedChosenNumbers)
 		
