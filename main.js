@@ -29,11 +29,10 @@ document.querySelector("#play").addEventListener("click", function () {
 });
 
 // Close result
-document.getElementById("close").addEventListener("mousedown", function () {
+document.getElementById("close").addEventListener("click", function () {
 	setTimeout(function () {
 		popup.style.display = "none";
 	}, 200)
-	console.log('ok')
 })
 
 var numbers = [];
@@ -68,7 +67,6 @@ for (i = 1; i <= 7; i++) {
 		document.getElementById(`res${i}`).innerHTML = `0${numbers[i - 1]}`;
 	} else document.getElementById(`res${i}`).innerHTML = numbers[i - 1];
 }
-
 
 // Ticket
 // Chosing 
