@@ -28,7 +28,8 @@ document.querySelector("#play").addEventListener("click", function () {
 	}, 8000)
 });
 
-document.getElementById("close").addEventListener("click", function () {
+// Close result
+document.getElementById("close").addEventListener("mousedown", function () {
 	setTimeout(function () {
 		popup.style.display = "none";
 	}, 200)
@@ -131,7 +132,6 @@ clear.addEventListener("click", function () {
 console.log(sortedChosenNumbers)
 console.log(numbers)
 
-
 function compareArrays(num, sor) {
 
 	index = 0;
@@ -150,4 +150,3 @@ setTimeout(function () {
 }, 800);
 
 
-// If score is 5 or more

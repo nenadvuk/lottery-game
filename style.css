@@ -192,10 +192,6 @@ html {
     animation: popupSmooth 1.5s linear;
 }
 
-#close:hover {
-    color: red;
-    transition: all .2s;
-}
 
 .popup-container {
     position: absolute;
@@ -219,6 +215,14 @@ html {
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
 }
+
+#close:hover {
+    color: red;
+    transition: all .2s;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
 
 @keyframes spin {
     0% {
