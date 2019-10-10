@@ -1,6 +1,6 @@
 
 
-// Numbers
+// New game
 document.querySelector("#newGame").addEventListener("click", function () {
 	window.location.reload()
 });
@@ -28,13 +28,8 @@ document.querySelector("#play").addEventListener("click", function () {
 	}, 8000)
 });
 
-// Close result
-document.getElementById("close").addEventListener("click", function () {
-	setTimeout(function () {
-		popup.style.display = "none";
-	}, 200)
-})
 
+// Numbers
 var numbers = [];
 for (var i = 0; i < 7; i++) {
 	var add = true;
@@ -124,6 +119,16 @@ clear.addEventListener("click", function () {
 		count.innerHTML = checkedNumbers;
 	}
 });
+
+
+// Close result
+document.getElementById("close").addEventListener("click", function () {
+	setTimeout(function () {
+		popup.style.display = "none";
+	}, 200);
+	// Prevent clicking clear button, because game i s over
+	clear.classList.add("avoid-click");
+})
 
 // Score
 
