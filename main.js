@@ -3,10 +3,11 @@
 // Numbers
 document.querySelector("#newGame").addEventListener("click", function () {
 	window.location.reload()
-})
+});
 document.querySelector("#playAgain").addEventListener("click", function () {
 	window.location.reload()
-})
+});
+
 
 balls = document.querySelector(".ball-box");
 scoreBox = document.querySelector(".score-box");
@@ -25,6 +26,13 @@ document.querySelector("#play").addEventListener("click", function () {
 	setTimeout(function () {
 		popup.style.display = "block";
 	}, 8000)
+});
+
+document.getElementById("close").addEventListener("click", function () {
+	setTimeout(function () {
+		popup.style.display = "none";
+	}, 200)
+	console.log('ok')
 })
 
 var numbers = [];
