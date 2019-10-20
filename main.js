@@ -8,11 +8,13 @@ document.querySelector("#playAgain").addEventListener("click", function () {
 	window.location.reload()
 });
 
-
+// Balls container
 balls = document.querySelector(".ball-box");
+// Score container
 scoreBox = document.querySelector(".score-box");
 popupWindow = document.getElementById("popup-window");
-popup = document.querySelector(".popup")
+popup = document.querySelector(".popup");
+
 document.querySelector("#play").addEventListener("click", function () {
 	balls.style.display = "inline-block";
 	var score = compareArrays(numbers, sortedChosenNumbers);
@@ -57,6 +59,8 @@ for (var m = 0; m < numbers.length; m++) {
 	}
 }
 
+
+// Displaying numbers within balls
 for (i = 1; i <= 7; i++) {
 	if (numbers[i - 1] < 10) {
 		document.getElementById(`res${i}`).innerHTML = `0${numbers[i - 1]}`;
@@ -64,7 +68,7 @@ for (i = 1; i <= 7; i++) {
 }
 
 // Ticket
-// Chosing 
+// Chosing all elements with class td
 var checkedFields = document.querySelectorAll("td");
 var checkedNumbers = 0;
 var chosenNumbers = [];
@@ -100,7 +104,7 @@ for (var i = 0; i < checkedFields.length; i++) {
 				}
 			}
 		} console.log(sortedChosenNumbers)
-		
+
 	});
 };
 
@@ -117,6 +121,8 @@ clear.addEventListener("click", function () {
 		element.classList.remove("avoid-click");
 		checkedNumbers--;
 		count.innerHTML = checkedNumbers;
+		play.style.backgroundColor = "rgb(255, 107, 107)";
+		play.style.pointerEvents = "none";
 	}
 });
 
