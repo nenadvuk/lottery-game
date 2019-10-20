@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+body {
+    background: rgba(190, 181, 238, 1);
+    background: -moz-linear-gradient(45deg, rgba(190, 181, 238, 1) 0%, rgba(149, 137, 235, 1) 24%, rgba(60, 42, 229, 1) 76%, rgba(197, 190, 239, 1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(190, 181, 238, 1)), color-stop(24%, rgba(149, 137, 235, 1)), color-stop(76%, rgba(60, 42, 229, 1)), color-stop(100%, rgba(197, 190, 239, 1)));
+    background: -webkit-linear-gradient(45deg, rgba(190, 181, 238, 1) 0%, rgba(149, 137, 235, 1) 24%, rgba(60, 42, 229, 1) 76%, rgba(197, 190, 239, 1) 100%);
+    background: -o-linear-gradient(45deg, rgba(190, 181, 238, 1) 0%, rgba(149, 137, 235, 1) 24%, rgba(60, 42, 229, 1) 76%, rgba(197, 190, 239, 1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(190, 181, 238, 1) 0%, rgba(149, 137, 235, 1) 24%, rgba(60, 42, 229, 1) 76%, rgba(197, 190, 239, 1) 100%);
+    background: linear-gradient(45deg, rgba(190, 181, 238, 1) 0%, rgba(149, 137, 235, 1) 24%, rgba(60, 42, 229, 1) 76%, rgba(197, 190, 239, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#beb5ee', endColorstr='#c5beef', GradientType=1);
+}
+
 html {
     font-size: 62.5%;
 }
@@ -484,16 +495,7 @@ button:focus {
 }
 
 @media only screen and (max-width: 425px) {
-    body {
-        background: rgba(190,181,238,1);
-background: -moz-linear-gradient(45deg, rgba(190,181,238,1) 0%, rgba(149,137,235,1) 24%, rgba(60,42,229,1) 76%, rgba(197,190,239,1) 100%);
-background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(190,181,238,1)), color-stop(24%, rgba(149,137,235,1)), color-stop(76%, rgba(60,42,229,1)), color-stop(100%, rgba(197,190,239,1)));
-background: -webkit-linear-gradient(45deg, rgba(190,181,238,1) 0%, rgba(149,137,235,1) 24%, rgba(60,42,229,1) 76%, rgba(197,190,239,1) 100%);
-background: -o-linear-gradient(45deg, rgba(190,181,238,1) 0%, rgba(149,137,235,1) 24%, rgba(60,42,229,1) 76%, rgba(197,190,239,1) 100%);
-background: -ms-linear-gradient(45deg, rgba(190,181,238,1) 0%, rgba(149,137,235,1) 24%, rgba(60,42,229,1) 76%, rgba(197,190,239,1) 100%);
-background: linear-gradient(45deg, rgba(190,181,238,1) 0%, rgba(149,137,235,1) 24%, rgba(60,42,229,1) 76%, rgba(197,190,239,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#beb5ee', endColorstr='#c5beef', GradientType=1 );
-    }
+   
     .tg td {
         font-size: 2rem;
     }
