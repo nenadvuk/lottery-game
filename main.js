@@ -18,6 +18,12 @@ popup = document.querySelector(".popup");
 document.querySelector("#play").addEventListener("click", function () {
 	balls.style.display = "inline-block";
 	var score = compareArrays(numbers, sortedChosenNumbers);
+	for (i = 0; i < numbers.length; i++) {
+		if (numbers[i] === sortedChosenNumbers[i]) {
+			document.querySelector(".ball-" + i).style.color = "green"
+			document.querySelector(".ball-" + i).style.fontWeight  = "900"
+		} 
+	}
 	setTimeout(function () {
 		scoreBox.style.display = "block";
 	}, 7000);
@@ -28,6 +34,7 @@ document.querySelector("#play").addEventListener("click", function () {
 	setTimeout(function () {
 		popup.style.display = "block";
 	}, 8000)
+	play.style.pointerEvents = "none"
 });
 
 
@@ -58,6 +65,7 @@ for (var m = 0; m < numbers.length; m++) {
 		}
 	}
 }
+
 
 
 // Displaying numbers within balls
