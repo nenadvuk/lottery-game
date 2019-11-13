@@ -17,8 +17,7 @@ popup = document.querySelector(".popup");
 
 document.querySelector("#play").addEventListener("click", function () {
 	balls.style.display = "inline-block";
-	var score = compareArrays(numbers, sortedChosenNumbers);
-	
+	const score = compareArrays(numbers, sortedChosenNumbers);
 	setTimeout(function () {
 		scoreBox.style.display = "block";
 	}, 7000);
@@ -33,11 +32,11 @@ document.querySelector("#play").addEventListener("click", function () {
 
 
 // Numbers
-var numbers = [];
-for (var i = 0; i < 7; i++) {
-	var add = true;
-	var randomNumber = Math.floor(Math.random() * 39) + 1;
-	for (var y = 0; y < 39; y++) {
+let numbers = [];
+for (let i = 0; i < 7; i++) {
+	let add = true;
+	let randomNumber = Math.floor(Math.random() * 39) + 1;
+	for (let y = 0; y < 39; y++) {
 		if (numbers[y] == randomNumber) {
 			add = false;
 		}
@@ -49,9 +48,9 @@ for (var i = 0; i < 7; i++) {
 	}
 }
 
-var highestNumber = 0;
-for (var m = 0; m < numbers.length; m++) {
-	for (var n = m + 1; n < numbers.length; n++) {
+let highestNumber = 0;
+for (let m = 0; m < numbers.length; m++) {
+	for (let n = m + 1; n < numbers.length; n++) {
 		if (numbers[n] < numbers[m]) {
 			highestNumber = numbers[m];
 			numbers[m] = numbers[n];
@@ -71,16 +70,16 @@ for (i = 1; i <= 7; i++) {
 
 // Ticket
 // Chosing all elements with class td
-var checkedFields = document.querySelectorAll("td");
-var checkedNumbers = 0;
-var chosenNumbers = [];
-var sortedChosenNumbers = [];
-var chosenSevenOrNull = false;
-var count = document.getElementById("count");
-var chkdNumColor = document.querySelector(".checked-numbers");
-var play = document.getElementById("play")
-var gamesNumber = 0;
-for (var i = 0; i < checkedFields.length; i++) {
+let checkedFields = document.querySelectorAll("td");
+let checkedNumbers = 0;
+let chosenNumbers = [];
+let sortedChosenNumbers = [];
+let chosenSevenOrNull = false;
+let count = document.getElementById("count");
+let chkdNumColor = document.querySelector(".checked-numbers");
+let play = document.getElementById("play")
+let gamesNumber = 0;
+for (let i = 0; i < checkedFields.length; i++) {
 	checkedFields[i].addEventListener("mousedown", function () {
 		if (!chosenSevenOrNull) {
 			// Adding color to clicked field
@@ -112,7 +111,7 @@ for (var i = 0; i < checkedFields.length; i++) {
 
 // Clear last filed
 
-var clear = document.getElementById("clear");
+let clear = document.getElementById("clear");
 clear.addEventListener("click", function () {
 	chosenSevenOrNull = false;
 	chkdNumColor.style.backgroundColor = "white";
