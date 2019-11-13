@@ -20,7 +20,7 @@ document.querySelector("#play").addEventListener("click", function () {
 	var score = compareArrays(numbers, sortedChosenNumbers);
 	for (i = 0; i < numbers.length; i++) {
 		if (numbers[i] === sortedChosenNumbers[i]) {
-			document.querySelector(".ball-" + i).style.color = "green"
+			document.querySelector(".ball-" + i).style.color = "limegreen"
 			document.querySelector(".ball-" + i).style.fontWeight  = "900"
 		} 
 	}

@@ -124,6 +124,7 @@ html {
     animation: spin 1s linear, moveLeft 1s linear;
     animation-fill-mode: both;
     top: 0%;
+    color: limegreen;
     
 
 }
