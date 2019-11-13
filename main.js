@@ -18,16 +18,10 @@ popup = document.querySelector(".popup");
 document.querySelector("#play").addEventListener("click", function () {
 	balls.style.display = "inline-block";
 	var score = compareArrays(numbers, sortedChosenNumbers);
-	for (i = 0; i < numbers.length; i++) {
-		if (numbers[i] === sortedChosenNumbers[i]) {
-			document.querySelector(".ball-" + i).style.color = "limegreen"
-			document.querySelector(".ball-" + i).style.fontWeight  = "900"
-		} 
-	}
+	
 	setTimeout(function () {
 		scoreBox.style.display = "block";
 	}, 7000);
-	console.log(score)
 	setTimeout(function () {
 		odometer.innerHTML = Number(score);
 	}, 8500);
@@ -39,11 +33,11 @@ document.querySelector("#play").addEventListener("click", function () {
 
 
 // Numbers
-let numbers = [];
-for (let i = 0; i < 7; i++) {
-	let add = true;
-	const randomNumber = Math.floor(Math.random() * 39) + 1;
-	for (let y = 0; y < 39; y++) {
+var numbers = [];
+for (var i = 0; i < 7; i++) {
+	var add = true;
+	var randomNumber = Math.floor(Math.random() * 39) + 1;
+	for (var y = 0; y < 39; y++) {
 		if (numbers[y] == randomNumber) {
 			add = false;
 		}
@@ -55,9 +49,9 @@ for (let i = 0; i < 7; i++) {
 	}
 }
 
-let highestNumber = 0;
-for (let m = 0; m < numbers.length; m++) {
-	for (let n = m + 1; n < numbers.length; n++) {
+var highestNumber = 0;
+for (var m = 0; m < numbers.length; m++) {
+	for (var n = m + 1; n < numbers.length; n++) {
 		if (numbers[n] < numbers[m]) {
 			highestNumber = numbers[m];
 			numbers[m] = numbers[n];
@@ -69,7 +63,7 @@ for (let m = 0; m < numbers.length; m++) {
 
 
 // Displaying numbers within balls
-for (let i = 1; i <= 7; i++) {
+for (i = 1; i <= 7; i++) {
 	if (numbers[i - 1] < 10) {
 		document.getElementById(`res${i}`).innerHTML = `0${numbers[i - 1]}`;
 	} else document.getElementById(`res${i}`).innerHTML = numbers[i - 1];
@@ -77,16 +71,16 @@ for (let i = 1; i <= 7; i++) {
 
 // Ticket
 // Chosing all elements with class td
-let checkedFields = document.querySelectorAll("td");
-let checkedNumbers = 0;
-let chosenNumbers = [];
-let sortedChosenNumbers = [];
-let chosenSevenOrNull = false;
-let count = document.getElementById("count");
-let chkdNumColor = document.querySelector(".checked-numbers");
-let play = document.getElementById("play")
-let gamesNumber = 0;
-for (let i = 0; i < checkedFields.length; i++) {
+var checkedFields = document.querySelectorAll("td");
+var checkedNumbers = 0;
+var chosenNumbers = [];
+var sortedChosenNumbers = [];
+var chosenSevenOrNull = false;
+var count = document.getElementById("count");
+var chkdNumColor = document.querySelector(".checked-numbers");
+var play = document.getElementById("play")
+var gamesNumber = 0;
+for (var i = 0; i < checkedFields.length; i++) {
 	checkedFields[i].addEventListener("mousedown", function () {
 		if (!chosenSevenOrNull) {
 			// Adding color to clicked field
@@ -118,7 +112,7 @@ for (let i = 0; i < checkedFields.length; i++) {
 
 // Clear last filed
 
-let clear = document.getElementById("clear");
+var clear = document.getElementById("clear");
 clear.addEventListener("click", function () {
 	chosenSevenOrNull = false;
 	chkdNumColor.style.backgroundColor = "white";
@@ -152,8 +146,8 @@ console.log(numbers)
 function compareArrays(num, sor) {
 
 	index = 0;
-	for (let i = 0; i < num.length; i++) {
-		for (let j = 0; j < sor.length; j++) {
+	for (i = 0; i < num.length; i++) {
+		for (j = 0; j < sor.length; j++) {
 			if (num[i] === sor[j]) {
 				index++
 			}

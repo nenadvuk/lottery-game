@@ -116,20 +116,18 @@ html {
     width: 50px;
     border-radius: 50%;
     position: absolute;
-    color: red;
 }
 
-.ball-0 {
+.ball-1 {
     background-image: url("img/loto-kugla1-sm.png");
     animation: spin 1s linear, moveLeft 1s linear;
     animation-fill-mode: both;
     top: 0%;
-    color: limegreen;
     
 
 }
 
-.ball-1 {
+.ball-2 {
     background-image: url("img/loto-kugla2-sm.png");
     animation: spin 1s linear, moveLeft2 1s linear;
     animation-delay: 1s;
@@ -137,7 +135,7 @@ html {
     top: 13%;
 }
 
-.ball-2 {
+.ball-3 {
     background-image: url("img/loto-kugla3-sm.png");
     animation: spin 1s linear, moveLeft3 1s linear;
     animation-delay: 2s;
@@ -145,7 +143,7 @@ html {
     top: 26%;
 }
 
-.ball-3 {
+.ball-4 {
     background-image: url("img/loto-kugla4-sm.png");
     animation: spin 1s linear, moveLeft4 1s linear;
     animation-delay: 3s;
@@ -153,7 +151,7 @@ html {
     top: 39%;
 }
 
-.ball-4 {
+.ball-5 {
     background-image: url("img/loto-kugla5-sm.png");
     animation: spin 1s linear, moveLeft5 1s linear;
     animation-delay: 4s;
@@ -161,7 +159,7 @@ html {
     top: 52%;
 }
 
-.ball-5 {
+.ball-6 {
     background-image: url("img/loto-kugla6-sm.png");
     animation: spin 1s linear, moveLeft6 1s linear;
     animation-delay: 5s;
@@ -169,7 +167,7 @@ html {
     top: 65%;
 }
 
-.ball-6 {
+.ball-7 {
     background-image: url("img/loto-kugla7-sm.png");
     animation: spin 1s linear, moveLeft7 1s linear;
     animation-delay: 6s;
