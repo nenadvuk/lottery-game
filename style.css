@@ -105,7 +105,7 @@ html {
 .result-box {
     position: relative;
     top: 15px;
-    left: 16px;
+    left: 16.5px;
     font-size: 20px;
     z-index: 50;
    
@@ -116,6 +116,8 @@ html {
     width: 50px;
     border-radius: 50%;
     position: absolute;
+    color: red;
+    font-weight: bold;
 }
 
 .ball-1 {
