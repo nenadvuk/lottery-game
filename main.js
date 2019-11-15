@@ -22,8 +22,7 @@ document.querySelector("#play").addEventListener("click", function () {
 	for (let i = 0; i < numbers.length; i++) {
 		for (let j = 0; j < sortedChosenNumbers.length; j++) {
 			if (numbers[i] === sortedChosenNumbers[j]) {
-				document.getElementById("ball"+i).style.color = "green"
-				/* document.getElementById("ball"+i).style.fontWeight = "900"; */
+				document.getElementById("ball"+i).style.color = "limegreen"
 			}
 		}
 	}
