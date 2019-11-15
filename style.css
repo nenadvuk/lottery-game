@@ -275,7 +275,7 @@ button:focus {
 }
 
 @keyframes words {
-    0% {
+    50% {
         color: white;
     }
 

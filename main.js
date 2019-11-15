@@ -1,7 +1,9 @@
 
 
 // New game
-document.querySelector("#newGame").addEventListener("click", function () {
+let newGame = document.querySelector("#newGame")
+
+newGame.addEventListener("click", function () {
 	window.location.reload()
 });
 document.querySelector("#playAgain").addEventListener("click", function () {
@@ -14,7 +16,7 @@ balls = document.querySelector(".ball-box");
 scoreBox = document.querySelector(".score-box");
 popupWindow = document.getElementById("popup-window");
 popup = document.querySelector(".popup");
-
+let play = document.getElementById("play")
 document.querySelector("#play").addEventListener("click", function () {
 	balls.style.display = "inline-block";
 	const score = compareArrays(numbers, sortedChosenNumbers);
@@ -22,11 +24,15 @@ document.querySelector("#play").addEventListener("click", function () {
 	for (let i = 0; i < numbers.length; i++) {
 		for (let j = 0; j < sortedChosenNumbers.length; j++) {
 			if (numbers[i] === sortedChosenNumbers[j]) {
-				document.getElementById("ball"+i).style.color = "limegreen"
+				document.getElementById("ball" + i).style.color = "limegreen"
 			}
 		}
 	}
 
+	setTimeout(function () {
+		play.style.backgroundColor = "rgb(255, 107, 107)";
+		newGame.style.backgroundColor = "lightgreen"
+	}, 8500)
 	setTimeout(function () {
 		scoreBox.style.display = "block";
 	}, 7000);
@@ -37,7 +43,7 @@ document.querySelector("#play").addEventListener("click", function () {
 		popup.style.display = "block";
 	}, 8000)
 	play.style.pointerEvents = "none";
-	
+
 });
 
 
@@ -87,7 +93,6 @@ let sortedChosenNumbers = [];
 let chosenSevenOrNull = false;
 let count = document.getElementById("count");
 let chkdNumColor = document.querySelector(".checked-numbers");
-let play = document.getElementById("play")
 let gamesNumber = 0;
 for (let i = 0; i < checkedFields.length; i++) {
 	checkedFields[i].addEventListener("mousedown", function () {
@@ -105,7 +110,7 @@ for (let i = 0; i < checkedFields.length; i++) {
 			if (checkedNumbers === 7) {
 				chkdNumColor.style.backgroundColor = "lightgreen"
 				chosenSevenOrNull = true;
-				play.style.backgroundColor = "green";
+				play.style.backgroundColor = "lightgreen";
 				play.style.pointerEvents = "all";
 				if (play) {
 					console.log("ok")
