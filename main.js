@@ -20,6 +20,7 @@ let play = document.getElementById("play")
 document.querySelector("#play").addEventListener("click", function () {
 	balls.style.display = "inline-block";
 	const score = compareArrays(numbers, sortedChosenNumbers);
+	play.style.pointerEvents = "none";
 
 	for (let i = 0; i < numbers.length; i++) {
 		for (let j = 0; j < sortedChosenNumbers.length; j++) {
@@ -28,21 +29,15 @@ document.querySelector("#play").addEventListener("click", function () {
 			}
 		}
 	}
-
-	setTimeout(function () {
-		play.style.backgroundColor = "rgb(255, 107, 107)";
-		newGame.style.backgroundColor = "lightgreen"
-	}, 8500)
-	setTimeout(function () {
-		scoreBox.style.display = "block";
-	}, 7000);
 	setTimeout(function () {
 		odometer.innerHTML = Number(score);
-	}, 8500);
-	setTimeout(function () {
+		play.style.backgroundColor = "rgb(255, 107, 107)";
+		newGame.style.backgroundColor = "lightgreen"
+		scoreBox.style.display = "block";
 		popup.style.display = "block";
-	}, 8000)
-	play.style.pointerEvents = "none";
+	}, 8500);
+	
+	
 
 });
 
@@ -155,7 +150,6 @@ document.getElementById("close").addEventListener("click", function () {
 // Score
 
 console.log(sortedChosenNumbers)
-console.log(numbers)
 
 function compareArrays(num, sor) {
 
