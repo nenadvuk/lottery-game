@@ -11,11 +11,11 @@ document.querySelector("#playAgain").addEventListener("click", function () {
 });
 
 // Balls container
-balls = document.querySelector(".ball-box");
+let balls = document.querySelector(".ball-box");
 // Score container
-scoreBox = document.querySelector(".score-box");
-popupWindow = document.getElementById("popup-window");
-popup = document.querySelector(".popup");
+let scoreBox = document.querySelector(".score-box");
+let popupWindow = document.getElementById("popup-window");
+let popup = document.querySelector(".popup");
 let play = document.getElementById("play")
 document.querySelector("#play").addEventListener("click", function () {
 	balls.style.display = "inline-block";
@@ -32,7 +32,7 @@ document.querySelector("#play").addEventListener("click", function () {
 	setTimeout(function () {
 		odometer.innerHTML = Number(score);
 		play.style.backgroundColor = "rgb(255, 107, 107)";
-		newGame.style.backgroundColor = "lightgreen"
+		newGame.style.backgroundColor = "limegreen"
 		scoreBox.style.display = "block";
 		popup.style.display = "block";
 	}, 8500);
@@ -73,7 +73,7 @@ for (let m = 0; m < numbers.length; m++) {
 
 
 // Displaying numbers within balls
-for (i = 1; i <= 7; i++) {
+for (let i = 1; i <= 7; i++) {
 	if (numbers[i - 1] < 10) {
 		document.getElementById(`res${i}`).innerHTML = `0${numbers[i - 1]}`;
 	} else document.getElementById(`res${i}`).innerHTML = numbers[i - 1];
@@ -103,9 +103,9 @@ for (let i = 0; i < checkedFields.length; i++) {
 			chosenNumbers.push(clickedNumber)
 			sortedChosenNumbers = chosenNumbers.sort((a, b) => a - b);
 			if (checkedNumbers === 7) {
-				chkdNumColor.style.backgroundColor = "lightgreen"
+				chkdNumColor.style.backgroundColor = "limegreen"
 				chosenSevenOrNull = true;
-				play.style.backgroundColor = "lightgreen";
+				play.style.backgroundColor = "limegreen";
 				play.style.pointerEvents = "all";
 				if (play) {
 					console.log("ok")
