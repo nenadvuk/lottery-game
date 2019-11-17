@@ -19,6 +19,10 @@ html {
     font-size: 62.5%;
 }
 
+header {
+    padding: 0 20px;
+}
+
 h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
@@ -51,7 +55,7 @@ h1 {
 .checked-field {
     background-color: rgb(255, 146, 146);
     color: white;
-    transition: all .2s;
+    transition: all .3s;
 }
 
 #play {
@@ -238,44 +242,14 @@ button:focus {
     outline: none;
 }
 
-#word-1 {
-    animation: words .3s linear;
-    animation-delay: 1s;
-    
+#blink {
+    animation: words 2s ease-in-out;
+    animation-iteration-count: infinite;
 }
 
-#word-2 {
-    animation: words .3s linear;
-    animation-delay: 1.3s;
-}
-
-#word-3 {
-    animation: words .3s linear;
-    animation-delay: 1.6s;
-}
-
-#word-4 {
-    animation: words .3s linear;
-    animation-delay: 1.9s;
-}
-
-#word-5 {
-    animation: words .3s linear;
-    animation-delay: 2.2s;
-}
-
-#word-6 {
-    animation: words .3s linear;
-    animation-delay: 2.5s;
-}
-
-#word-7 {
-    animation: words .3s linear;
-    animation-delay: 2.8s;
-}
 
 @keyframes words {
-    50% {
+    30% {
         color: white;
     }
 

@@ -89,9 +89,12 @@ let chosenSevenOrNull = false;
 let count = document.getElementById("count");
 let chkdNumColor = document.querySelector(".checked-numbers");
 let gamesNumber = 0;
+let blink = document.getElementById("blink");
 for (let i = 0; i < checkedFields.length; i++) {
 	checkedFields[i].addEventListener("mousedown", function () {
 		if (!chosenSevenOrNull) {
+			blink.style.webkitAnimationPlayState = "paused";
+			blink.style.color = "white"
 			// Adding color to clicked field
 			this.classList.add('checked-field');
 			// Adding class to clicked field to prevent more than one click
@@ -134,6 +137,10 @@ clear.addEventListener("click", function () {
 		count.innerHTML = checkedNumbers;
 		play.style.backgroundColor = "rgb(255, 107, 107)";
 		play.style.pointerEvents = "none";
+	}
+	if (checkedNumbers == 0) {
+		blink.style.webkitAnimationPlayState = "running";
+		blink.style.color = "black";
 	}
 });
 
