@@ -51,6 +51,7 @@ h1 {
     overflow: hidden;
     cursor: pointer;
     border: 1px solid red;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .checked-field {
@@ -98,6 +99,10 @@ h1 {
     font-size: 50px;
 }
 
+.odometer span {
+    font-size: 5rem;
+}
+
 .ball-box {
     display: none;
     position: relative;
@@ -127,7 +132,7 @@ h1 {
 
 span {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
+    font-size: 2rem;
 }
 
 .ball-1 {
