@@ -26,7 +26,6 @@ header {
 }
 
 h1 {
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     font-size: 25px;
 }
 
@@ -46,7 +45,7 @@ h1 {
 
 .tg th {
     font-size: 2rem;
-    text-align: left;
+    text-align: center;
     padding: 5px;
     border-style: solid;
     border-width: 1px;
@@ -111,9 +110,9 @@ h1 {
 
 .result-box {
     position: relative;
-    top: 15px;
-    left: 16px;
-    font-size: 20px;
+    top: 14.5px;
+    left: 16.5px;
+    font-size: 17px;
     z-index: 50;
 }
 
@@ -185,7 +184,7 @@ h1 {
     background-color: white;
     color: black;
     border: 1px solid red;
-    padding: 10px;
+    padding: 6px;
     border-radius: 10px;
     text-align: center;
     font-size: 16px;
