@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: cursive;
 }
 
 html body {
@@ -17,6 +18,7 @@ html body {
 
 html {
     font-size: 62.5%;
+    
 }
 
 header {
@@ -24,7 +26,7 @@ header {
 }
 
 h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     font-size: 25px;
 }
 
@@ -32,13 +34,14 @@ h1 {
     text-align: center;
     font-family: Arial, sans-serif;
     font-size: 2rem;
-    padding: 4px 3px;
+    padding: 3px 3px;
     border-style: solid;
     overflow: hidden;
     word-break: normal;
     cursor: pointer;
     border: 2px solid red;
     backface-visibility: hidden;
+    font-family: cursive;
 }
 
 .tg th {
